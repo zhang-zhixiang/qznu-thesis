@@ -1,6 +1,6 @@
 %% qznu-thesis.cls
 %% 泉州师范学院本科毕业论文（设计）LaTeX 文档类
-%% 版本: 0.1.0  (2026-11-09)
+%% 版本: 0.1.1  (2026-11-10)
 %% 许可: MIT
 %%
 %% 设计依据:
@@ -12,7 +12,7 @@
 %% 提交前请务必向指导教师和学院教学秘书确认当年最新要求。
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{qznu-thesis}[2026/11/09 v0.1.0 Quanzhou Normal University undergraduate thesis]
+\ProvidesClass{qznu-thesis}[2026/11/10 v0.1.1 Quanzhou Normal University undergraduate thesis]
 
 % ---------------------------------------------------------------------------
 % 选项
@@ -183,6 +183,7 @@
 \newcommand{\qznu@keywords}{}
 \newcommand{\qznu@abstracten}{}
 \newcommand{\qznu@keywordsen}{}
+\newcommand{\qznu@logo}{figures/qznu-logo-name.png}
 
 \newcommand{\qznutitle}[1]{\gdef\qznu@title{#1}}
 \newcommand{\qznusubtitle}[1]{\gdef\qznu@subtitle{#1}}
@@ -204,6 +205,7 @@
 \newcommand{\qznukeywords}[1]{\gdef\qznu@keywords{#1}}
 \newcommand{\qznuabstractentext}[1]{\gdef\qznu@abstracten{#1}}
 \newcommand{\qznukeywordsen}[1]{\gdef\qznu@keywordsen{#1}}
+\newcommand{\qznulogo}[1]{\gdef\qznu@logo{#1}}
 
 % ---------------------------------------------------------------------------
 % 封面
@@ -223,10 +225,15 @@
   }%
   \begin{titlepage}
     \centering
-    \vspace*{1.0cm}
-    {\heiti\bfseries\fontsize{22}{28}\selectfont
-      泉\quad 州\quad 师\quad 范\quad 学\quad 院\par}
-    \vspace{0.8cm}
+    \vspace*{0.45cm}
+    \ifdefempty{\qznu@logo}
+      {{\heiti\bfseries\fontsize{22}{28}\selectfont
+        泉\quad 州\quad 师\quad 范\quad 学\quad 院\par}}
+      {\IfFileExists{\qznu@logo}
+        {\includegraphics[width=8.4cm]{\qznu@logo}\par}
+        {{\heiti\bfseries\fontsize{22}{28}\selectfont
+          泉\quad 州\quad 师\quad 范\quad 学\quad 院\par}}}
+    \vspace{0.85cm}
     {\heiti\bfseries\fontsize{36}{44}\selectfont
       毕业论文（设计）\par}
     \vspace{1.8cm}
