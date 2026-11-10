@@ -1,6 +1,6 @@
 %% qznu-thesis.cls
 %% 泉州师范学院本科毕业论文（设计）LaTeX 文档类
-%% 版本: 0.1.1  (2026-11-10)
+%% 版本: 0.1.2  (2026-11-10)
 %% 许可: MIT
 %%
 %% 设计依据:
@@ -12,7 +12,7 @@
 %% 提交前请务必向指导教师和学院教学秘书确认当年最新要求。
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{qznu-thesis}[2026/11/10 v0.1.1 Quanzhou Normal University undergraduate thesis]
+\ProvidesClass{qznu-thesis}[2026/11/10 v0.1.2 Quanzhou Normal University undergraduate thesis]
 
 % ---------------------------------------------------------------------------
 % 选项
@@ -51,6 +51,7 @@
 \RequirePackage{fancyhdr}
 \RequirePackage{titlesec}
 \RequirePackage{titletoc}
+\RequirePackage{indentfirst}
 \RequirePackage{graphicx}
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}

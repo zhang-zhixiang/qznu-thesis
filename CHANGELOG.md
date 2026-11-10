@@ -1,5 +1,10 @@
 # 更新记录
 
+## v0.1.2 — 2026-11-10
+
+- 修复 `\section`/`\subsection` 后第一段没有首行缩进的问题：加载 `indentfirst`。
+- 新增 `tests/indent_probe.tex` 与 `tests/check_indent.py`，在回归测试中检查标题后首段缩进。
+
 ## v0.1.1 — 2026-11-10
 
 - 封面顶部改用学校官网的校徽 + 校名组合图（`figures/qznu-logo-name.png`）。

@@ -132,7 +132,7 @@
 | 中文正文 | 五号宋体 | `zihao=5`，`\songti` |
 | 英文正文 | 五号 Times New Roman | `\setmainfont{Times New Roman}`，缺失时回退 TeX Gyre Termes |
 | 行距 | 单倍行距 | `\linespread{1.0}` |
-| 首行缩进 | 2 个汉字字符 | `\parindent=2\ccwd` |
+| 首行缩进 | 2 个汉字字符，标题后首段同样缩进 | `\parindent=2\ccwd` + `indentfirst` |
 | 段前段后 | 未要求 | `\parskip=0pt` |
 
 ### 6.2 标题字号
