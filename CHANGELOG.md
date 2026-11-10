@@ -11,6 +11,8 @@
 - 附录图表编号自动切换为 A-1、B-1。
 - 提供 `check_content.py`、`check_pdf.py`、`tests/run_tests.sh`、Makefile 和 GitHub Actions。
 - 在 macOS（TeX Live 2026）上完成 19 页编译、四种方案回归测试与版面检查。
+- 显式写入一次参考文献样式，兼容不同 TeX Live 中 `gbt7714` 的自动写入差异。
+- 示例中的“蟳埔”改为常见的“浔埔”，避免 Fandol 字体缺字；检查脚本会报告缺失字符。
 
 ### 已知限制
 

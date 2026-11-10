@@ -70,6 +70,8 @@
 \RequirePackage{hyperref}
 \hypersetup{hidelinks,bookmarksnumbered=true,bookmarksopen=true}
 \RequirePackage[square,comma,sort&compress]{gbt7714}
+% 显式写入一次 \bibstyle，兼容不同 TeX Live 中 gbt7714 的自动写入差异。
+\bibliographystyle{gbt7714-numerical}
 \AtBeginDocument{\setcitestyle{super,square,comma}}
 
 % ---------------------------------------------------------------------------

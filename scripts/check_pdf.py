@@ -82,6 +82,9 @@ def main() -> int:
         log = args.log.read_text(encoding="utf-8", errors="replace")
         checks.append(("日志无致命错误", not re.search(r"(?m)^!", log), "无“!”错误"))
         checks.append(("无未定义引用", not re.search(r"(Citation|Reference).*undefined", log), "无未定义引用"))
+        missing = re.findall(r"Missing character: There is no (.+?) in font", log)
+        checks.append(("日志无缺失字符", not missing,
+                       "无" if not missing else "缺失：" + "、".join(missing[:5])))
         overfull = [float(x) for x in re.findall(r"Overfull \\hbox \(([\d.]+)pt too wide\)", log)]
         checks.append(("无超过 5pt 的 Overfull hbox", all(x <= 5 for x in overfull),
                        f"最大 {max(overfull):.2f}pt" if overfull else "无"))
