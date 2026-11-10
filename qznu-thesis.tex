@@ -1,0 +1,40 @@
+% !TeX program = xelatex
+% 泉州师范学院本科毕业论文（设计）示例文档
+% 使用 XeLaTeX + BibTeX 编译；推荐直接运行 make。
+\documentclass[scheme=1]{qznu-thesis}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{arrows.meta,positioning}
+\pgfplotsset{compat=1.18}
+
+\input{metadata}
+
+\begin{document}
+
+% 封面（不编页码）
+\makecover
+
+% 前置部分：摘要、英文摘要、目录
+\qznufrontmatter
+\makeabstract
+\makeabstracten
+\qznutableofcontents
+
+% 正文：页码从 1 开始
+\qznumainmatter
+\input{chapters/01-introduction}
+\input{chapters/02-theory}
+\input{chapters/03-design}
+\input{chapters/04-results}
+\input{chapters/05-conclusion}
+
+% 参考文献
+\qznubibliography{refs}
+
+% 致谢与附录（不编号章节）
+\input{chapters/99-acknowledgements}
+\input{chapters/appendix-a}
+\input{chapters/appendix-b}
+
+\end{document}

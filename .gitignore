@@ -1,0 +1,30 @@
+# LaTeX 中间文件
+build/
+dist/
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.xdv
+*.lof
+*.lot
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+
+# Python
+__pycache__/
+*.pyc
