@@ -73,7 +73,8 @@ def main() -> int:
             continue
         cols = line.split()
         if len(cols) >= 5 and re.search(r"(Songti|Fandol|SimSun|Song|Heiti|Kai|STSong|STHeiti)", line):
-            cjk_fonts.append((line.split()[0], cols[4]))
+            emb = next((c for c in cols[3:] if c in {"yes", "no"}), "")
+            cjk_fonts.append((cols[0], emb))
     font_ok = bool(cjk_fonts) and all(emb == "yes" for _, emb in cjk_fonts)
     detail = f"{len(cjk_fonts)} 个中文字体" if cjk_fonts else "未检测到中文字体"
     checks.append(("中文字体已嵌入", font_ok, detail))
